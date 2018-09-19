@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_playlist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hipsterbait.android.activities.CassetteBoxActivity"
+    android:background="@color/hbCharcoal80">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/hbCharcoal">
+        <com.hipsterbait.android.widgets.HBTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            app:typeface="robotoCondensedBold"
+            android:textSize="24sp"
+            android:text="My Mixtape" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp">
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:id="@+id/playlist_button_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/hbGreen"
+            android:onClick="playAllTapped"
+            android:tag="0"
+            android:text="Play All"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            app:typeface="robotoCondensed" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:id="@+id/playlist_button_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@color/hbCharcoal"
+            android:onClick="shuffleTapped"
+            android:tag="1"
+            android:text="Shuffle"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            app:typeface="robotoCondensed" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:id="@+id/playlist_button_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@color/hbCharcoal"
+            android:onClick="ratingTapped"
+            android:tag="2"
+            android:text="Rating"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            app:typeface="robotoCondensed" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:id="@+id/playlist_button_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@color/hbCharcoal"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:animateLayoutChanges="true"
+        android:id="@+id/playlist_gridview"
+        android:verticalSpacing="8dp" />
+</LinearLayout>

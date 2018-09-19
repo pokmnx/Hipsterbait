@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_track_cassette_tab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hipsterbait.android.activities.TrackCassetteTabActivity">
+
+    <com.hipsterbait.android.widgets.HBTextView
+        android:text="#666 Cassette Name"
+        android:layout_width="match_parent"
+        android:id="@+id/track_tab_cassette_name"
+        android:textSize="18sp"
+        android:background="@color/hbCharcoal"
+        android:layout_height="36dp"
+        android:textColor="@color/hbBlue"
+        app:typeface="robotoCondensed"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/track_tab_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/track_tab_tablayout"
+        android:layout_below="@+id/track_tab_cassette_name"
+        android:background="@color/hbCharcoal80">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/track_tab_activetab_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="true"
+        android:elevation="0dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:id="@+id/track_tab_left_padding" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/hbCharcoal80"
+            android:id="@+id/track_tab_active_tab" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/track_tab_right_padding" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/track_tab_tablayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="trackTapped" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/compass_icon"
+                android:layout_weight="1"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track"
+                android:layout_marginBottom="8dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="statsTapped" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/stats_icon"
+                android:layout_weight="1"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stats"
+                android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="locationTapped" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/location_hints_icon"
+                android:layout_weight="1"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp" />
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location Hints"
+                android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,181 @@
+[
+	{
+		"elementType": "labels.text",
+		"stylers": [
+			{
+				"color": "#ffffff"
+			},
+			{
+				"visibility": "off"
+			},
+			{
+				"weight": 0.1
+			}
+		]
+	},
+	{
+		"featureType": "administrative",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "#9b9595"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	},
+	{
+		"featureType": "administrative",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "#ffffff"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	},
+	{
+		"featureType": "landscape",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "#3c3939"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	},
+	{
+		"featureType": "poi",
+		"elementType": "geometry.fill",
+		"stylers": [
+			{
+				"color": "#76706f"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	},
+	{
+		"featureType": "poi.business",
+		"elementType": "geometry.fill",
+		"stylers": [
+			{
+				"color": "#9d005e"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	},
+	{
+		"featureType": "poi.business",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "#d99abf"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	},
+	{
+		"featureType": "poi.government",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "#740042"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	},
+	{
+		"featureType": "poi.government",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "#b17095"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	},
+	{
+		"featureType": "poi.park",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"visibility": "off"
+			}
+		]
+	},
+	{
+		"featureType": "poi.park",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "#72bf44"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	},
+	{
+		"featureType": "road",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "#575151"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	},
+	{
+		"featureType": "road",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "#9b9595"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	},
+	{
+		"featureType": "water",
+		"elementType": "geometry.fill",
+		"stylers": [
+			{
+				"color": "#0094c9"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	},
+	{
+		"featureType": "water",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "#a6d0e8"
+			},
+			{
+				"visibility": "on"
+			}
+		]
+	}
+]

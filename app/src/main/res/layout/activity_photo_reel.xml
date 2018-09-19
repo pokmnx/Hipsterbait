@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_photo_reel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hipsterbait.android.activities.PhotoReelActivity"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/photo_reel_art_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/photo_reel_controls_layout"
+        android:background="@color/hbCharcoal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/no_hint"
+            android:id="@+id/photo_reel_image_view"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/hbCharcoal" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/photo_reel_controls_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/hbCharcoal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/photo_swipe_arrow_left"
+            android:id="@+id/photo_reel_arrow_left"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="rightArrowTapped" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="Title: Hint Image 1 of 4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/photo_reel_title"
+                android:layout_weight="1"
+                android:layout_marginBottom="8dp"
+                app:typeface="robotoCondensedBold"
+                android:textSize="15sp"
+                android:gravity="bottom|center_horizontal" />
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="By: Brendan Crawford"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/photo_reel_user"
+                android:layout_weight="1"
+                app:typeface="robotoCondensedBold"
+                android:textSize="15sp"
+                android:gravity="top|center_horizontal" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/photo_swipe_arrow_right"
+            android:id="@+id/photo_reel_arrow_right"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:onClick="leftArrowTapped" />
+    </LinearLayout>
+</RelativeLayout>

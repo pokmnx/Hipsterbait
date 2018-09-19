@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="250dp"
+    android:layout_height="155dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:background="@color/hbCharcoal"
+        android:layout_weight="1">
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="A cassette is nearby!"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/textView2"
+            android:layout_weight="1"
+            app:typeface="robotoCondensedBold"
+            android:textSize="20sp"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="2dp"
+            android:layout_marginTop="28dp" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="Look around to find it."
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/textView"
+            app:typeface="robotoCondensed"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingTop="2dp"
+            android:layout_marginBottom="28dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="OK"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/dialog_capture_ok_button"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:typeface="robotoCondensed"
+            android:layout_weight="1"
+            android:background="@color/hbPink"
+            android:layout_marginEnd="1dp" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="Ignore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/dialog_capture_cancel_button"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:typeface="robotoCondensed"
+            android:layout_weight="1"
+            android:background="@color/hbCharcoal" />
+    </LinearLayout>
+</LinearLayout>

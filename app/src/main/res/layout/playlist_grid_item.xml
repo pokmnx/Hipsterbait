@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/hbCharcoal">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/hbCharcoal"
+        android:id="@+id/playlist_cell_main_layout">
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/playlist_cell_album_art" />
+
+            <ImageButton
+                android:layout_height="37dp"
+                app:srcCompat="@drawable/box_play_button"
+                android:id="@+id/playlist_cell_play_pause"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"
+                android:layout_width="37dp"
+                android:scaleType="centerInside" />
+
+            <ProgressBar
+                android:id="@+id/playlist_cell_progressbar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:id="@+id/playlist_item_artist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unrevealed"
+                    android:textSize="15sp"
+                    app:typeface="robotoCondensedBold" />
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:id="@+id/playlist_item_song"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Unrevealed"
+                    android:textSize="15sp"
+                    app:typeface="robotoCondensedBold" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top">
+
+                    <ImageView
+                        app:srcCompat="@drawable/horns_char10"
+                        android:id="@+id/playlist_cell_horns_1"
+                        android:layout_marginEnd="8dp"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        app:srcCompat="@drawable/horns_char10"
+                        android:id="@+id/playlist_cell_horns_2"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        app:srcCompat="@drawable/horns_char10"
+                        android:id="@+id/playlist_cell_horns_3"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        app:srcCompat="@drawable/horns_char10"
+                        android:id="@+id/playlist_cell_horns_4"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        app:srcCompat="@drawable/horns_char10"
+                        android:id="@+id/playlist_cell_horns_5"
+                        android:layout_marginEnd="16dp" />
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="40dp"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    app:srcCompat="@drawable/playlist_up_char"
+                    android:id="@+id/playlist_cell_up_arrow"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitCenter" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    app:srcCompat="@drawable/playlist_down_char"
+                    android:id="@+id/playlist_cell_down_arrow"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

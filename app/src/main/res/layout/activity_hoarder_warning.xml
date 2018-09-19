@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_confirm_archive"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hipsterbait.android.activities.HoarderWarningActivity"
+    android:gravity="center_horizontal"
+    android:background="@color/hbCharcoal">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <com.hipsterbait.android.widgets.HBTextView
+        android:id="@+id/hoarder_alert_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center_horizontal"
+        android:text="You really got to let it go..."
+        android:textSize="24sp"
+        app:typeface="robotoCondensedBold" />
+
+    <com.hipsterbait.android.widgets.HBTextView
+        android:id="@+id/hoarder_alert_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center_horizontal"
+        android:text='"#666" has been in your possesion for 3 days now.'
+        android:textSize="20sp"
+        app:typeface="robotoCondensed" />
+
+    <com.hipsterbait.android.widgets.HBTextView
+        android:id="@+id/hoarder_alert_subheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="Hide the cassette soon and we can forget about the whole thing."
+        android:textSize="20sp"
+        app:typeface="robotoCondensedBold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:id="@+id/hoarder_alert_button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@color/hbGreen"
+        android:onClick="hideTapped"
+        android:text="Hide Cassette Now"
+        android:textAllCaps="false"
+        android:textSize="23sp"
+        app:typeface="robotoCondensed" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:id="@+id/hoarder_alert_close_button"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/hbCharcoal80"
+        android:onClick="closeTapped"
+        android:text="@string/close"
+        android:textAllCaps="false"
+        android:textSize="23sp"
+        app:typeface="robotoCondensed" />
+
+</LinearLayout>

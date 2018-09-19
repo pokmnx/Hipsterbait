@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/com.hipsterbait.android"
+    android:id="@+id/activity_create_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hipsterbait.android.activities.CreateAccountActivity"
+    android:background="@color/hbCharcoal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hb_letters_logo"
+        android:id="@+id/create_account_letters_logo"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp" />
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="@string/close"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/create_account_close_button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/hbCharcoal80"
+        android:layout_height="50dp"
+        app:typeface="robotoCondensed"
+        android:textAllCaps="false"
+        android:textSize="23sp"
+        android:onClick="closeButtonTapped" />
+
+    <ImageView
+        app:srcCompat="@drawable/rock_hands_black"
+        android:id="@+id/create_account_rock_hands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/create_account_letters_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/create_account_update_email_button">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/create_account_buffer" />
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.hipsterbait.android.widgets.HBEditText
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/create_account_email_field"
+                android:background="@color/hbCharcoal30"
+                android:hint="@string/email_address"
+                app:typeface="robotoCondensed"
+                android:textSize="20sp"
+                android:textColor="@color/hbCharcoal80"
+                android:textColorHint="@color/hbCharcoal80"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+            <com.hipsterbait.android.widgets.HBEditText
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/create_account_email_field"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/create_account_password_field"
+                android:background="@color/hbCharcoal30"
+                android:hint="@string/password"
+                app:typeface="robotoCondensed"
+                android:textSize="20sp"
+                android:textColor="@color/hbCharcoal80"
+                android:textColorHint="@color/hbCharcoal80"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_marginTop="16dp" />
+
+            <com.hipsterbait.android.widgets.HBEditText
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/create_account_password_field"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/create_account_repeat_password_field"
+                android:layout_marginTop="8dp"
+                android:background="@color/hbCharcoal30"
+                android:hint="@string/repeat_password"
+                app:typeface="robotoCondensed"
+                android:textSize="20sp"
+                android:textColor="@color/hbCharcoal80"
+                android:textColorHint="@color/hbCharcoal80"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/create_account_buffer2" />
+
+
+    </LinearLayout>
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="@string/create_account"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/create_account_update_email_button"
+        android:background="@color/hbBlue"
+        android:textAllCaps="false"
+        app:typeface="robotoCondensed"
+        android:textSize="23sp"
+        android:onClick="createAccountTapped"
+        android:layout_marginBottom="50dp"
+        android:layout_above="@+id/create_account_close_button"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/hbCharcoal"
+        android:elevation="5dp"
+        android:id="@+id/create_account_loading_layout"
+        android:visibility="invisible">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.hipsterbait.android.other.LoadingPick
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal">
+
+        </com.hipsterbait.android.other.LoadingPick>
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:typeface="robotoCondensedBold"
+            android:textSize="24sp"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:text="Stuff is happening"
+            android:textColor="@color/hbBlue"
+            android:layout_marginTop="20dp" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:typeface="robotoCondensed"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:text="Da-da da-na na-na-na\n  dant-dant-dant da-da..."
+            android:id="@+id/unarchive_confirm_cassette_name" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>

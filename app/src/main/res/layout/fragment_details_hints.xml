@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hipsterbait.android.activities.DetailsHintsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/details_hints_relative_layout"
+        android:background="@android:color/white">
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="There are no hints here."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/details_hints_textview"
+            android:textSize="17sp"
+            app:typeface="robotoCondensed"
+            android:textColor="@color/hbCharcoal"
+            android:background="@android:color/white" />
+    </RelativeLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/details_hints_gridview"
+        android:gravity="center"
+        android:textAlignment="gravity" />
+
+</FrameLayout>

@@ -1,0 +1,72 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hipsterbait.android.activities.AchievementsBadgeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal">
+
+            <com.hipsterbait.android.widgets.HBButton
+                android:text="Location"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/badges_location_button"
+                android:textAllCaps="false"
+                android:textSize="17sp"
+                app:typeface="robotoCondensed"
+                android:background="@color/hbBlue"
+                android:tag="0" />
+
+            <com.hipsterbait.android.widgets.HBButton
+                android:text="Activity"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/badges_activity_button"
+                android:background="@color/hbCharcoal60"
+                android:textAllCaps="false"
+                android:textSize="17sp"
+                app:typeface="robotoCondensed"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:tag="1" />
+
+            <com.hipsterbait.android.widgets.HBButton
+                android:text="Random"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/badges_random_button"
+                android:background="@color/hbCharcoal60"
+                android:textAllCaps="false"
+                android:textSize="17sp"
+                app:typeface="robotoCondensed"
+                android:tag="2" />
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/badges_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="90dp"
+            android:gravity="center_horizontal"
+            android:numColumns="3"
+            android:verticalSpacing="16dp" />
+
+    </LinearLayout>
+</FrameLayout>

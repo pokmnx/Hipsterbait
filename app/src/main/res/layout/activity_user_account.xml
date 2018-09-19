@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/com.hipsterbait.android"
+    android:id="@+id/activity_user_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hipsterbait.android.activities.UserAccountActivity"
+    android:background="@color/hbBlue">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/hbPink">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/hb_logo_white"
+            android:id="@+id/user_account_imageButton"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="80dp"
+            android:onClick="logoTapped" />
+
+        <ImageButton
+            android:id="@+id/user_account_imageButton2"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="burgerTapped"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/nav_burger" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                app:srcCompat="@drawable/avatar_generic"
+                android:id="@+id/user_account_avatar_image"
+                android:layout_weight="0" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="16dp">
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:typeface="robotoCondensedBold"
+                    android:textColor="@color/tw__solid_white"
+                    android:id="@+id/user_account_display_name_label" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.hipsterbait.android.widgets.HBTextView
+                        android:text="Rank: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:typeface="robotoCondensedBold"
+                        android:textColor="@color/tw__solid_white"
+                        android:id="@+id/user_account_rank" />
+
+                    <com.hipsterbait.android.widgets.HBTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:typeface="robotoCondensed"
+                        android:textColor="@color/tw__solid_white"
+                        android:id="@+id/user_account_rank_label" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                app:srcCompat="@drawable/account_toggle"
+                android:id="@+id/user_account_toggle_button"
+                android:layout_weight="0"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:paddingBottom="8dp"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:onClick="accountToggleTapped"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/user_account_settings_button"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_weight="0"
+                android:background="@android:color/transparent"
+                android:onClick="settingsTapped"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/settings_gear" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/hbDarkBlue" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_height="25dp">
+
+            <View
+                android:id="@+id/user_account_progress_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/tw__solid_white" />
+
+            <View
+                android:id="@+id/user_account_progress_background"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/hbDarkPink" />
+
+            <View
+                android:id="@+id/user_account_progress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/hbPink"
+                android:layout_margin="1dp" />
+
+        </RelativeLayout>
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:typeface="robotoCondensed"
+            android:id="@+id/user_account_progress_label"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <ImageButton
+                android:id="@+id/user_account_badge_1_image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/locked_badge_bg" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/user_account_rank_image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/locked_badge_bg" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/user_account_badge_2_image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/locked_badge_bg" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1">
+
+                <com.hipsterbait.android.widgets.HBButton
+                android:text="@string/bait"
+                android:layout_width="fill_parent"
+                android:id="@+id/user_account_bait_button"
+                android:background="@color/hbPink"
+                android:layout_height="match_parent"
+                app:typeface="robotoCondensed"
+                android:textAllCaps="false"
+                android:textSize="23sp"
+                android:onClick="baitTapped" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/user_account_bait_button"
+                    app:srcCompat="@drawable/pick_dark_pink"
+                    android:id="@+id/user_account_bait_pick"
+                    android:layout_marginEnd="12dp"
+                    android:layout_centerVertical="true"
+                    android:elevation="2dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:visibility="invisible" />
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:text="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/user_account_bait_pick"
+                    android:layout_toStartOf="@+id/user_account_bait_pick"
+                    app:typeface="robotoCondensed"
+                    android:textSize="12sp"
+                    android:id="@+id/user_account_bait_number"
+                    android:elevation="11dp"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <com.hipsterbait.android.widgets.HBButton
+                android:text="@string/find"
+                android:layout_width="fill_parent"
+                android:id="@+id/user_account_find_button"
+                android:background="@color/hbGreen"
+                android:layout_height="50dp"
+                app:typeface="robotoCondensed"
+                android:textAllCaps="false"
+                android:textSize="23sp"
+                android:onClick="findTapped"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="@string/cassette_box"
+            android:layout_width="fill_parent"
+            android:id="@+id/user_account_close_button"
+            android:background="@color/hbCharcoal"
+            android:layout_height="match_parent"
+            app:typeface="robotoCondensed"
+            android:textAllCaps="false"
+            android:textSize="23sp"
+            android:onClick="cassetteBoxTapped" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/flag_charcoal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/user_account_flag_pick"
+            android:elevation="11dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="invisible" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/user_account_flag_pick"
+            android:layout_toStartOf="@+id/user_account_flag_pick"
+            app:typeface="robotoCondensed"
+            android:textSize="12sp"
+            android:id="@+id/user_account_flag_number"
+            android:elevation="19dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/user_account_hoarder_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toStartOf="@+id/user_account_flag_number"
+            android:elevation="13dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/pick_orange" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/user_account_hoarder_pick"
+            android:layout_toStartOf="@+id/user_account_hoarder_pick"
+            app:typeface="robotoCondensed"
+            android:textSize="12sp"
+            android:id="@+id/user_account_hoarder_number"
+            android:elevation="11dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

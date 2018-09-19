@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/com.hipsterbait.android"
+    android:id="@+id/activity_email_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hipsterbait.android.activities.EmailLoginActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hb_letters_logo"
+        android:id="@+id/email_login_letters_logo"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp" />
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="@string/close"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/email_login_close_button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/hbCharcoal80"
+        android:layout_height="50dp"
+        app:typeface="robotoCondensed"
+        android:textAllCaps="false"
+        android:textSize="23sp"
+        android:onClick="closeButtonTapped" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/email_login_letters_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/email_login_update_email_button">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/email_login_buffer" />
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.hipsterbait.android.widgets.HBEditText
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/email_login_email_field"
+                android:background="@color/hbCharcoal30"
+                android:hint="@string/email_address"
+                app:typeface="robotoCondensed"
+                android:textSize="20sp"
+                android:textColor="@color/hbCharcoal80"
+                android:textColorHint="@color/hbCharcoal80"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textCursorDrawable="@null" />
+
+            <com.hipsterbait.android.widgets.HBEditText
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/email_login_email_field"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/email_login_password_field"
+                android:layout_marginTop="8dp"
+                android:background="@color/hbCharcoal30"
+                android:hint="@string/password"
+                app:typeface="robotoCondensed"
+                android:textSize="20sp"
+                android:textColor="@color/hbCharcoal80"
+                android:textColorHint="@color/hbCharcoal80"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textCursorDrawable="@null" />
+
+            <com.hipsterbait.android.widgets.HBRadioButton
+                android:text="@string/keep_me_logged_in"
+                app:typeface="robotoCondensed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/email_login_stay_logged_button"
+                android:layout_below="@+id/email_login_password_field"
+                android:layout_alignStart="@+id/email_login_password_field"
+                android:layout_marginTop="8dp"
+                app:buttonTint="@color/hbPink" />
+
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/email_login_buffer2" />
+
+
+    </LinearLayout>
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="@string/login"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/email_login_update_email_button"
+        android:background="@color/hbBlue"
+        android:textAllCaps="false"
+        app:typeface="robotoCondensed"
+        android:textSize="23sp"
+        android:onClick="loginTapped"
+        android:layout_marginBottom="50dp"
+        android:layout_above="@+id/email_login_close_button"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        app:srcCompat="@drawable/rock_hands_black"
+        android:id="@+id/email_login_rock_hands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

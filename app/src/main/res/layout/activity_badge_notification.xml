@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/com.hipsterbait.android"
+    android:id="@+id/activity_badge_notification"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hipsterbait.android.activities.BadgeNotificationActivity"
+    android:background="@color/hbCharcoal80">
+
+    <com.hipsterbait.android.widgets.HBTextView
+        android:text="Congratulations! You just leveled up!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/badge_notif_header"
+        android:layout_marginTop="24dp"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        app:typeface="robotoCondensedBold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp" />
+
+    <ImageView
+        android:layout_width="158dp"
+        android:layout_height="158dp"
+        android:layout_below="@+id/badge_notif_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        app:srcCompat="@drawable/back_of_badge"
+        android:id="@+id/badge_notif_image_back" />
+
+    <ImageView
+        android:layout_width="158dp"
+        android:layout_height="158dp"
+        app:srcCompat="@drawable/roadie"
+        android:layout_below="@+id/badge_notif_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:id="@+id/badge_notif_image" />
+
+    <com.hipsterbait.android.widgets.HBTextView
+        android:text="1 Roadie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/badge_notif_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:id="@+id/badge_notif_name"
+        android:textSize="20sp"
+        app:typeface="robotoCondensedBold"
+        android:textColor="@android:color/white" />
+
+    <com.hipsterbait.android.widgets.HBTextView
+        android:text="You earned the rank of &quot;Roadie&quot; the moment you opened your Player Account. No you don't need any experience. A roadie is responsible for setting up, tearing down, and maintaining the band's music equipment. We can't do it without the stagehands! (Help yourself to the band's beer)."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/badge_notif_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/badge_notif_detail"
+        android:textSize="15sp"
+        app:typeface="robotoCondensedLight"
+        android:textColor="@color/hbCharcoal10"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp" />
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="Continue"
+        android:layout_width="fill_parent"
+        android:id="@+id/badge_notif_continue_button"
+        android:background="@color/hbCharcoal"
+        android:layout_height="50dp"
+        app:typeface="robotoCondensed"
+        android:textAllCaps="false"
+        android:textSize="23sp"
+        android:onClick="continueButtonTapped"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/cassette_select_right"
+        android:id="@+id/badge_notif_arrow_right"
+        android:layout_alignTop="@+id/badge_notif_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="16dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/cassette_select_left"
+        android:id="@+id/badge_notif_arrow_left"
+        android:layout_alignTop="@+id/badge_notif_image"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="54dp"
+        android:layout_marginStart="16dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

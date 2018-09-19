@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hipsterbait.android.activities.MenuActivity"
+    android:background="@color/hbDarkPink">
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="@string/find_cassettes"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/menu_button4"
+        android:textAllCaps="false"
+        app:typeface="robotoCondensed"
+        android:textSize="17sp"
+        android:background="@android:color/transparent"
+        android:onClick="findCassettesTapped" />
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="@string/close"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/menu_HBButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/hbCharcoal80"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        app:typeface="robotoCondensed"
+        android:textSize="23sp"
+        android:onClick="closeButtonTapped" />
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="@string/hipster_bait_artists"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:id="@+id/menu_button3"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/menu_button4"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        app:typeface="robotoCondensed"
+        android:textSize="17sp"
+        android:onClick="artistTapped" />
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="@string/charts"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:id="@+id/menu_button2"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/menu_button3"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        app:typeface="robotoCondensed"
+        android:textSize="17sp"
+        android:onClick="chartsTapped" />
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="@string/login_register_join_us"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:id="@+id/menu_button5"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/menu_button2"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        app:typeface="robotoCondensed"
+        android:textSize="17sp"
+        android:onClick="loginTapped" />
+</RelativeLayout>

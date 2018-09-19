@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_qrscanner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hipsterbait.android.activities.QRScannerActivity">
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="@string/close"
+        android:layout_width="fill_parent"
+        android:id="@+id/qrscanner_close_button"
+        android:background="@color/hbCharcoal"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:typeface="robotoCondensed"
+        android:textAllCaps="false"
+        android:textSize="23sp"
+        android:onClick="closeButtonTapped" />
+
+    <LinearLayout
+        android:id="@+id/qrscanner_controls_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/hbBlue">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/flash_button"
+            android:id="@+id/qrscanner_flash_button"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="flashButtonTapped" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/qrscanner_camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/qrscanner_controls_layout"
+        android:layout_above="@+id/qrscanner_close_button"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/qr_scan_inactive"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/qrscanner_scan_target"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</RelativeLayout>

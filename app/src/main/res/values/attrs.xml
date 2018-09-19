@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="typeface" format="enum">
+        <enum name="robotoCondensed" value="0" />
+        <enum name="robotoCondensedBold" value="1" />
+        <enum name="robotoCondensedItalic" value="2" />
+        <enum name="robotoCondensedLight" value="3" />
+        <enum name="robotoCondensedBoldItalic" value="4" />
+        <enum name="robotoCondensedLightItalic" value="5" />
+    </attr>
+
+    <declare-styleable name="HBButton">
+        <attr name="typeface" />
+    </declare-styleable>
+
+    <declare-styleable name="HBEditText">
+        <attr name="typeface" />
+    </declare-styleable>
+
+    <declare-styleable name="HBTextView">
+        <attr name="typeface" />
+    </declare-styleable>
+
+    <declare-styleable name="HBRadioButton">
+        <attr name="typeface" />
+    </declare-styleable>
+</resources>

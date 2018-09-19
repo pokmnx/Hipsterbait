@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cassette_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hipsterbait.android.activities.CassetteDetailActivity"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="148dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:id="@+id/cassette_detail_cassette_image" />
+
+    <LinearLayout
+        android:id="@+id/details_button_container"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/cassette_detail_cassette_image"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal">
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="Info"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cassette_detail_info_button"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            app:typeface="robotoCondensed"
+            android:background="@color/hbBlue"
+            android:tag="0" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="Hints"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cassette_detail_hints_button"
+            android:background="@color/hbCharcoal60"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            app:typeface="robotoCondensed"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:tag="1" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="Photos"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cassette_detail_photos_button"
+            android:background="@color/hbCharcoal60"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            app:typeface="robotoCondensed"
+            android:tag="2" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_button_container"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/cassette_detail_viewpager"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_button_container"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/cassette_detail_loading_layout"
+        android:background="@android:color/white">
+
+        <com.hipsterbait.android.other.LoadingPick
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center">
+
+        </com.hipsterbait.android.other.LoadingPick>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/cassette_detail_hint_flag_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/hbCharcoal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:context="com.hipsterbait.android.activities.ConfirmArchiveActivity">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center_horizontal"
+            android:text="Not on my watch!"
+            android:textColor="@color/hbOrange"
+            android:textSize="24sp"
+            app:typeface="robotoCondensedBold" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center_horizontal"
+            android:text="You are about to remove another player’s hint. Not because you’re a troll yourself, but because they are. Right? Hit the button below and make it so."
+            android:textSize="20sp"
+            app:typeface="robotoCondensedLight" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:text="“I don't say things to be offensive; I say things because they're funny to me. It amuses me.”"
+            android:textSize="20sp"
+            app:typeface="robotoCondensedLight" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:id="@+id/HBTextView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="- Marilyn Manson"
+            android:textSize="20sp"
+            app:typeface="robotoCondensedLightItalic" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:id="@+id/cassette_detail_flag_hint_button"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@color/hbOrange"
+            android:text="Flag Hint"
+            android:textAllCaps="false"
+            android:textSize="23sp"
+            app:typeface="robotoCondensed" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:id="@+id/bait_share_close_button"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/hbCharcoal80"
+            android:onClick="closeFlagTapped"
+            android:text="@string/close"
+            android:textAllCaps="false"
+            android:textSize="23sp"
+            app:typeface="robotoCondensed" />
+
+    </LinearLayout>
+
+</RelativeLayout>

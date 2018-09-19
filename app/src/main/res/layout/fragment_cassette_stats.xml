@@ -1,0 +1,462 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hipsterbait.android.activities.CassetteStatsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/hbCharcoal" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/hbCharcoal80"
+            android:layout_marginBottom="1dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical">
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="Points Earned:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/track_stats_points_title"
+                android:textSize="17sp"
+                app:typeface="robotoCondensedBold"
+                android:layout_marginEnd="4dp" />
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/track_stats_points_total"
+                android:textSize="17sp"
+                app:typeface="robotoCondensed" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/hbCharcoal80"
+            android:layout_marginBottom="1dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/hbCharcoal80"
+                android:layout_marginBottom="1dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:layout_marginBottom="8dp">
+
+                        <com.hipsterbait.android.widgets.HBTextView
+                            android:text="Your Rating:"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/track_stats_your_rating"
+                            android:textSize="17sp"
+                            app:typeface="robotoCondensedBold"
+                            android:layout_width="90dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/horns_char10"
+                            android:id="@+id/track_stats_your_horns_1"
+                            android:layout_marginEnd="8dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/horns_char10"
+                            android:id="@+id/track_stats_your_horns_2"
+                            android:layout_marginEnd="8dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/horns_char10"
+                            android:id="@+id/track_stats_your_horns_3"
+                            android:layout_marginEnd="8dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/horns_char10"
+                            android:id="@+id/track_stats_your_horns_4"
+                            android:layout_marginEnd="8dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/horns_char10"
+                            android:id="@+id/track_stats_your_horns_5"
+                            android:layout_marginEnd="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="top">
+
+                        <com.hipsterbait.android.widgets.HBTextView
+                            android:text="Average:"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/track_stats_average_rating"
+                            android:textSize="17sp"
+                            app:typeface="robotoCondensedBold" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/horns_char10"
+                            android:id="@+id/track_stats_average_horns_1"
+                            android:layout_marginEnd="8dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/horns_char10"
+                            android:id="@+id/track_stats_average_horns_2"
+                            android:layout_marginEnd="8dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/horns_char10"
+                            android:id="@+id/track_stats_average_horns_3"
+                            android:layout_marginEnd="8dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/horns_char10"
+                            android:id="@+id/track_stats_average_horns_4"
+                            android:layout_marginEnd="8dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/horns_char10"
+                            android:id="@+id/track_stats_average_horns_5"
+                            android:layout_marginEnd="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.hipsterbait.android.widgets.HBButton
+                    android:text="Change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/track_stats_change_button"
+                    android:layout_weight="1"
+                    android:textSize="17sp"
+                    app:typeface="robotoCondensed"
+                    android:textAllCaps="false"
+                    android:background="@android:color/transparent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/track_stats_change_rating_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/hbCharcoal80"
+                android:layout_marginBottom="1dp"
+                android:gravity="center_horizontal"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="29dp"
+                        app:srcCompat="@drawable/horns_char10"
+                        android:id="@+id/track_stats_horns_1"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:tag="0" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="29dp"
+                        app:srcCompat="@drawable/horns_char10"
+                        android:id="@+id/track_stats_horns_2"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:tag="1" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="29dp"
+                        app:srcCompat="@drawable/horns_char10"
+                        android:id="@+id/track_stats_horns_3"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:tag="2" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="29dp"
+                        app:srcCompat="@drawable/horns_char10"
+                        android:id="@+id/track_stats_horns_4"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:tag="3" />
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="29dp"
+                        app:srcCompat="@drawable/horns_char10"
+                        android:id="@+id/track_stats_horns_5"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="16dp"
+                        android:tag="4" />
+
+                    <com.hipsterbait.android.widgets.HBTextView
+                        android:text="Rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/track_stats_rate_change"
+                        android:textSize="17sp"
+                        app:typeface="robotoCondensed"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:text="So you're thinking Black Sabbath with Dio"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/track_stats_sassy"
+                    android:textSize="14sp"
+                    app:typeface="robotoCondensed"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/hbCharcoal"
+            android:layout_marginBottom="1dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/hbCharcoal80"
+                android:layout_marginEnd="1dp"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp">
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:text="Status:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/track_stats_status_title"
+                    android:textSize="17sp"
+                    app:typeface="robotoCondensedBold"
+                    android:layout_marginEnd="4dp" />
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:text="In Play"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/track_stats_status_detail"
+                    android:textSize="17sp"
+                    app:typeface="robotoCondensed" />
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/pick_green"
+                    android:id="@+id/track_stats_pick" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/hbCharcoal80"
+                android:paddingEnd="16dp"
+                android:paddingStart="8dp">
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:text="Flagged:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/track_stats_flagged_title"
+                    android:textSize="17sp"
+                    app:typeface="robotoCondensedBold"
+                    android:layout_marginEnd="4dp"
+                    android:layout_gravity="center_vertical" />
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:text="No"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/track_stats_flagged_detail"
+                    android:textSize="17sp"
+                    android:layout_gravity="center_vertical" />
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/track_stats_flagged_number"
+                    android:textSize="12sp"
+                    app:typeface="robotoCondensed"
+                    android:layout_marginEnd="2dp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/flag_blue"
+                    android:id="@+id/track_stats_flag"
+                    android:layout_width="20dp"
+                    android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/hbCharcoal80"
+            android:layout_marginBottom="1dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:layout_marginBottom="8dp">
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:text="Artist:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/track_stats_artist_title"
+                    android:textSize="17sp"
+                    app:typeface="robotoCondensedBold"
+                    android:layout_marginEnd="4dp" />
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:text="[Unrevealed]"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/track_stats_artist_detail"
+                    android:textSize="17sp"
+                    app:typeface="robotoCondensed" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:text="Song:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/track_stats_song_title"
+                    android:textSize="17sp"
+                    app:typeface="robotoCondensedBold"
+                    android:layout_marginEnd="4dp" />
+
+                <com.hipsterbait.android.widgets.HBTextView
+                    android:text="[Unrevealed]"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/track_stats_song_detail"
+                    android:textSize="17sp"
+                    app:typeface="robotoCondensed" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/hbCharcoal80"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="Add me to the artist email list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/track_stats_artist_toggle"
+                android:textSize="17sp"
+                app:typeface="robotoCondensedBold" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/track_stats_switch"
+                android:gravity="center"
+                android:theme="@style/SwitchTheme" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

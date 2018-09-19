@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_logged_menu"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hipsterbait.android.activities.LoggedMenuActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/hbMidnightBlue"
+        android:layout_height="140dp"
+        android:clipChildren="false">
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="PLAY/PAUSE"
+            app:typeface="robotoCondensed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logged_menu_textView4"
+            android:textSize="10sp"
+            android:textColor="@color/hbBlue"
+            android:layout_alignTop="@+id/logged_menu_textView3"
+            android:layout_alignStart="@+id/logged_menu_rew_button"
+            android:layout_alignEnd="@+id/logged_menu_fwd_button"
+            android:gravity="center"/>
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="REW/REV"
+            app:typeface="robotoCondensed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logged_menu_textView3"
+            android:textSize="10sp"
+            android:layout_below="@+id/logged_menu_rew_button"
+            android:layout_alignStart="@+id/logged_menu_rew_button"
+            android:layout_alignEnd="@+id/logged_menu_rew_button"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/hbBlue"
+            android:gravity="center" />
+
+        <ImageButton
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            app:srcCompat="@drawable/forward_button"
+            android:id="@+id/logged_menu_fwd_button"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="18dp"
+            android:scaleType="fitCenter"
+            android:layout_below="@+id/logged_menu_seekBar"
+            android:layout_toEndOf="@+id/logged_menu_play_button"
+            android:onClick="fwdTapped" />
+
+        <com.hipsterbait.android.other.ProgressCircleMenu
+            android:id="@+id/logged_menu_progress_circle"
+            android:layout_alignStart="@+id/logged_menu_play_button"
+            android:layout_alignTop="@id/logged_menu_play_button"
+            android:elevation="5dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="@string/cassette_player"
+            app:typeface="robotoCondensed"
+            android:textColor="@color/tw__solid_white"
+            android:textSize="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/logged_menu_textView"
+            android:layout_marginTop="8dp" />
+
+        <SeekBar
+            android:layout_height="wrap_content"
+            android:id="@+id/logged_menu_seekBar"
+            android:layout_below="@+id/logged_menu_textView"
+            android:layout_centerHorizontal="true"
+            android:layout_width="230dp"
+            android:theme="@style/SwitchTheme" />
+
+        <ImageButton
+            app:srcCompat="@drawable/rewind_button"
+            android:id="@+id/logged_menu_rew_button"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_below="@+id/logged_menu_seekBar"
+            android:layout_alignStart="@+id/logged_menu_seekBar"
+            android:layout_height="44dp"
+            android:layout_width="44dp"
+            android:onClick="rewTapped" />
+
+        <ImageButton
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            app:srcCompat="@drawable/eject_button"
+            android:id="@+id/logged_menu_eject_button"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="18dp"
+            android:scaleType="fitCenter"
+            android:layout_below="@+id/logged_menu_seekBar"
+            android:layout_toEndOf="@+id/logged_menu_fwd_button"
+            android:onClick="ejectTapped" />
+
+        <ImageButton
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            app:srcCompat="@drawable/play_button"
+            android:id="@+id/logged_menu_play_button"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="18dp"
+            android:scaleType="fitCenter"
+            android:layout_below="@+id/logged_menu_seekBar"
+            android:layout_toEndOf="@+id/logged_menu_rew_button"
+            android:onClick="playTapped" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="EJECT"
+            app:typeface="robotoCondensed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logged_menu_textView5"
+            android:textSize="10sp"
+            android:textColor="@color/hbBlue"
+            android:layout_below="@+id/logged_menu_eject_button"
+            android:layout_alignStart="@+id/logged_menu_eject_button"
+            android:layout_alignEnd="@+id/logged_menu_eject_button"
+            android:layout_marginTop="4dp"
+            android:gravity="center" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="FF/CUE"
+            app:typeface="robotoCondensed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logged_menu_textView2"
+            android:textSize="10sp"
+            android:textColor="@color/hbBlue"
+            android:layout_below="@+id/logged_menu_fwd_button"
+            android:layout_alignStart="@+id/logged_menu_fwd_button"
+            android:layout_alignEnd="@+id/logged_menu_fwd_button"
+            android:gravity="center"
+            android:layout_marginTop="4dp" />
+
+        <ImageView
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/min_volume_icon"
+            android:layout_alignTop="@+id/logged_menu_seekBar"
+            android:layout_toStartOf="@+id/logged_menu_seekBar"
+            android:id="@+id/imageView2"
+            android:layout_width="8dp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/max_volume_icon"
+            android:layout_alignTop="@+id/logged_menu_seekBar"
+            android:layout_toEndOf="@+id/logged_menu_seekBar"
+            android:id="@+id/imageView3"
+            android:layout_marginTop="-3dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/hbBlue"
+        android:id="@+id/logged_menu_view3"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hbBlue">
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="@string/find_cassettes"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:id="@+id/logged_menu_HBButton8"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            app:typeface="robotoCondensed"
+            android:textSize="17sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="findCassettesTapped" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="Bait Cassettes"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:id="@+id/logged_menu_HBButton6"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            app:typeface="robotoCondensed"
+            android:textSize="17sp"
+            android:layout_below="@+id/logged_menu_HBButton8"
+            android:layout_centerHorizontal="true"
+            android:onClick="baitTapped" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="Cassette Box"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:id="@+id/logged_menu_HBButton7"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            app:typeface="robotoCondensed"
+            android:textSize="17sp"
+            android:layout_below="@+id/logged_menu_HBButton6"
+            android:layout_centerHorizontal="true"
+            android:onClick="cassetteBoxTapped" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="Achievements"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:id="@+id/logged_menu_HBButton9"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            app:typeface="robotoCondensed"
+            android:textSize="17sp"
+            android:layout_below="@+id/logged_menu_HBButton7"
+            android:layout_centerHorizontal="true"
+            android:onClick="achievementsTapped" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="QR Scanner"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:id="@+id/logged_menu_HBButton10"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            app:typeface="robotoCondensed"
+            android:textSize="17sp"
+            android:layout_below="@+id/logged_menu_HBButton9"
+            android:layout_centerHorizontal="true"
+            android:onClick="qrScannerTapped" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="Account"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:id="@+id/logged_menu_HBButton11"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            app:typeface="robotoCondensed"
+            android:textSize="17sp"
+            android:layout_below="@+id/logged_menu_HBButton10"
+            android:layout_centerHorizontal="true"
+            android:onClick="accountTapped" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:srcCompat="@drawable/avatar_generic"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp"
+            android:id="@+id/logged_menu_avatar_image" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/hbBlue"
+        android:id="@+id/logged_menu_view2"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/hbDarkPink"
+        android:id="@+id/logged_menu_view"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hbDarkPink">
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="@string/hipster_bait_artists"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:id="@+id/logged_menu_HBButton4"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            app:typeface="robotoCondensed"
+            android:textSize="17sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="artistTapped" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="@string/charts"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:id="@+id/logged_menu_HBButton5"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            app:typeface="robotoCondensed"
+            android:textSize="17sp"
+            android:layout_below="@+id/logged_menu_HBButton4"
+            android:layout_centerHorizontal="true"
+            android:onClick="chartsTapped" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="Logout"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:id="@+id/logged_menu_HBButton13"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            app:typeface="robotoCondensed"
+            android:textSize="17sp"
+            android:layout_below="@+id/logged_menu_HBButton5"
+            android:layout_centerHorizontal="true"
+            android:onClick="logoutTapped" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/hbDarkPink"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="@string/close"
+        android:layout_width="fill_parent"
+        android:id="@+id/logged_menu_HBButton2"
+        android:background="@color/hbCharcoal"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        app:typeface="robotoCondensed"
+        android:textSize="23sp"
+        android:onClick="closeButtonTapped" />
+</LinearLayout>

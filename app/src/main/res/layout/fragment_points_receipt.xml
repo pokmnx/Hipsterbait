@@ -1,0 +1,116 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.hipsterbait.android.activities.PointsReceiptFragment"
+    android:background="@color/hbCharcoal10">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/disclosure_down"
+            android:id="@+id/receipt_close_button"
+            android:scaleType="center"
+            android:background="@color/hbPink" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="Look how rocktacular your hint is!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/receipt_title"
+            android:textColor="@color/hbCharcoal"
+            android:gravity="center"
+            android:textSize="18sp"
+            app:typeface="robotoCondensedBold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/receipt_progress_layout">
+
+            <View
+                android:id="@+id/receipt_progress_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/tw__solid_white" />
+
+            <View
+                android:id="@+id/receipt_progress_background"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/hbDarkPink" />
+
+            <View
+                android:id="@+id/receipt_progress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/hbPink"
+                android:layout_margin="1dp" />
+
+        </RelativeLayout>
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:typeface="robotoCondensed"
+            android:id="@+id/receipt_progress_label"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="[Level One Roadie] - [480 Points of 1,000]"
+            android:textColor="@color/hbCharcoal" />
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:id="@+id/receipt_gridview" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp">
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="Total Points "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/receipt_total_points_label"
+                android:layout_weight="1"
+                android:textColor="@color/hbCharcoal"
+                android:textSize="24sp"
+                app:typeface="robotoCondensedBold" />
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="775"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/receipt_total_points"
+                android:layout_weight="1"
+                android:textColor="@color/hbPink"
+                android:textSize="24sp"
+                app:typeface="robotoCondensedBold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <com.hipsterbait.android.widgets.HBTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/journey_griditem_name"
+        android:textColor="@android:color/black"
+        app:typeface="robotoCondensedBold"
+        android:textSize="15sp"
+        android:text="HELLO" />
+
+    <com.hipsterbait.android.widgets.HBTextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/journey_griditem_detail"
+        android:textColor="@android:color/black"
+        app:typeface="robotoCondensed"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/hbCharcoal40" />
+
+</LinearLayout>

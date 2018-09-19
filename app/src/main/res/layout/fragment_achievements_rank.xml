@@ -1,0 +1,80 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hipsterbait.android.activities.AchievementsRankFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/hbCharcoal80">
+
+        <FrameLayout
+            android:layout_width="71dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="28dp"
+            android:layout_alignTop="@+id/ranks_cassette_spool"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/black"
+            android:id="@+id/ranks_spool_container">
+
+            <ImageView
+                android:layout_height="174dp"
+                android:src="@drawable/spool"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/ranks_progress_view"
+                android:layout_width="20dp" />
+
+        </FrameLayout>
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text='Current Rank: Level 1 "Roadie"'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:id="@+id/ranks_current_label"
+            app:typeface="robotoCondensed"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/cassette_graph_graphic"
+            android:id="@+id/ranks_cassette_spool"
+            android:layout_below="@+id/ranks_current_label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="700 points away from completing this level."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ranks_progress_label"
+            android:layout_below="@+id/ranks_cassette_spool"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            app:typeface="robotoCondensedLight"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/ranks_cell_separator"
+            android:layout_below="@+id/ranks_progress_label"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/hbCharcoal" />
+
+        <GridView
+            android:id="@+id/ranks_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/ranks_cell_separator"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,99 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/com.hipsterbait.android"
+    android:layout_width="match_parent"
+    tools:context="com.hipsterbait.android.activities.AccountToggleFragment"
+    android:background="@android:color/white"
+    android:layout_height="306dp">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/disclosure_down"
+            android:id="@+id/acc_toggle_close"
+            android:background="@color/hbBlue" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:background="@color/hbCharcoal10">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/avatar_generic"
+                android:id="@+id/acc_toggle_user_image"
+                android:layout_weight="0"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp" />
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="Username"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/acc_toggle_username"
+                android:layout_weight="1"
+                android:textColor="@color/hbCharcoal"
+                android:textSize="15sp"
+                app:typeface="robotoCondensedBold"
+                android:gravity="center_vertical" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/pink_checkmark"
+                android:id="@+id/acc_toggle_user_check"
+                android:layout_weight="0"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="68dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/avatar_generic"
+                android:id="@+id/acc_toggle_band_image"
+                android:layout_weight="0"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp" />
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="Username"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/acc_toggle_bandname"
+                android:layout_weight="1"
+                android:textColor="@color/hbCharcoal"
+                android:textSize="15sp"
+                app:typeface="robotoCondensedBold"
+                android:gravity="center_vertical" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/pink_checkmark"
+                android:id="@+id/acc_toggle_band_check"
+                android:layout_weight="0"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+    </LinearLayout>
+</FrameLayout>

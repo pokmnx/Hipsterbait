@@ -1,0 +1,214 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hipsterbait.android.activities.AchievementsPointsFragment"
+    android:background="@color/hbCharcoal">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/points_layout">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/hbCharcoal80"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="Total Points to Date:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/points_total"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:textSize="15sp"
+                app:typeface="robotoCondensedBold" />
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/points_total_value"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="60sp"
+                android:textColor="@color/hbBlue"
+                app:typeface="robotoCondensedLight" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/hbCharcoal80"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="Best Day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/points_best_day"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:textSize="15sp"
+                app:typeface="robotoCondensedBold" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:background="@color/hbBlue"
+                    android:id="@+id/points_day_progress" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/hbCharcoal"
+                    android:id="@+id/points_day_progress_bg" />
+
+            </LinearLayout>
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="No points earned"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/points_best_day_value"
+                android:gravity="center_horizontal"
+                android:textSize="15sp"
+                app:typeface="robotoCondensed" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/hbCharcoal80"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="Best Month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/points_best_month"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:textSize="15sp"
+                app:typeface="robotoCondensedBold" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:background="@color/hbBlue"
+                    android:id="@+id/points_month_progress" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/hbCharcoal"
+                    android:id="@+id/points_month_progress_bg" />
+
+            </LinearLayout>
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="No points earned"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/points_best_month_value"
+                android:gravity="center_horizontal"
+                android:textSize="15sp"
+                app:typeface="robotoCondensed" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/hbCharcoal80"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="Best Cassette"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/points_best_cassette"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:textSize="15sp"
+                app:typeface="robotoCondensedBold" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:background="@color/hbBlue"
+                    android:id="@+id/points_cassette_progress" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/hbCharcoal"
+                    android:id="@+id/points_cassette_bg" />
+
+            </LinearLayout>
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="No Cassettes Found: 0 Points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/points_best_cassette_value"
+                android:gravity="center_horizontal"
+                android:textSize="15sp"
+                app:typeface="robotoCondensed" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

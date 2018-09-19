@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_bait_done"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hipsterbait.android.activities.BaitDoneActivity"
+    android:background="@color/hbBlue">
+
+    <com.hipsterbait.android.widgets.HBTextView
+        android:text="So what do you wanna do... now?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bait_done_button_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:id="@+id/bait_done_next"
+        app:typeface="robotoCondensedBold"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/bait_done_logo_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/hbPink">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/hb_logo_white"
+            android:id="@+id/bait_done_hb_logo"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="80dp"
+            android:onClick="logoTapped" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bait_done_close_button"
+        android:id="@+id/bait_done_button_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+
+            <com.hipsterbait.android.widgets.HBButton
+                android:text="@string/bait"
+                android:layout_width="fill_parent"
+                android:id="@+id/bait_done_bait_button"
+                android:background="@color/hbPink"
+                android:layout_height="match_parent"
+                app:typeface="robotoCondensed"
+                android:textAllCaps="false"
+                android:textSize="23sp"
+                android:onClick="baitButtonTapped" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignEnd="@+id/bait_done_bait_button"
+                app:srcCompat="@drawable/pick_dark_pink"
+                android:id="@+id/bait_done_bait_pick"
+                android:layout_marginEnd="12dp"
+                android:layout_centerVertical="true"
+                android:elevation="14dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:visibility="invisible" />
+
+            <com.hipsterbait.android.widgets.HBTextView
+                android:text="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/bait_done_bait_pick"
+                android:layout_toStartOf="@+id/bait_done_bait_pick"
+                app:typeface="robotoCondensed"
+                android:textSize="12sp"
+                android:id="@+id/bait_done_bait_number"
+                android:elevation="13dp"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="@string/find"
+            android:layout_width="fill_parent"
+            android:id="@+id/bait_done_find_button"
+            android:background="@color/hbGreen"
+            android:layout_height="50dp"
+            app:typeface="robotoCondensed"
+            android:textAllCaps="false"
+            android:textSize="23sp"
+            android:onClick="findButtonTapped"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <com.hipsterbait.android.widgets.HBButton
+        android:text="@string/close"
+        android:layout_width="fill_parent"
+        android:id="@+id/bait_done_close_button"
+        android:background="@color/hbCharcoal"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:typeface="robotoCondensed"
+        android:textAllCaps="false"
+        android:textSize="23sp"
+        android:onClick="closeButtonTapped" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/bait_done_logo_layout"
+        android:layout_above="@+id/bait_done_next"
+        android:gravity="center_horizontal">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="You may be asked to do an encore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:id="@+id/bait_done_title"
+            app:typeface="robotoCondensedBold"
+            android:textAllCaps="false"
+            android:textSize="17sp" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="If players are having difficulty finding your cassette we may call on you to add an additional hint. Don’t worry, your extra work will not go unrewarded. Every hint earns you additional 100 points."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:id="@+id/bait_done_detail"
+            app:typeface="robotoCondensedLight"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>

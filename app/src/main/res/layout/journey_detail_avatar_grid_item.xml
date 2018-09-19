@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="47dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            app:srcCompat="@drawable/avatar_generic"
+            android:id="@+id/journey_avatar_griditem_image" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/journey_avatar_griditem_name"
+            app:typeface="robotoCondensedBold"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/journey_avatar_griditem_rank"
+            android:layout_weight="1"
+            app:typeface="robotoCondensed"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/hbCharcoal40" />
+
+</LinearLayout>

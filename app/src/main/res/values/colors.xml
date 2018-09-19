@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="hbPink">#DF0885</color>
+    <color name="hbDarkPink">#9C005D</color>
+    <color name="hbCharcoal">#3b3838</color>
+    <color name="hbCharcoal90">#4F4C4C</color>
+    <color name="hbCharcoal80">#626060</color>
+    <color name="hbCharcoal60">#898888</color>
+    <color name="hbCharcoal40">#EAEAEB</color>
+    <color name="hbCharcoal30">#C4C3C2</color>
+    <color name="hbCharcoal20">#D8D7D7</color>
+    <color name="hbCharcoal10">#EBEBEB</color>
+    <color name="hbBlue">#0094C8</color>
+    <color name="hbDarkBlue">#006392</color>
+    <color name="hbMidnightBlue">#004F77</color>
+    <color name="hbLightBlue">#A6D0E7</color>
+    <color name="hbGreen">#71BF43</color>
+    <color name="hbDarkGreen">#007831</color>
+    <color name="hbLightGreen">#C6E2B4</color>
+    <color name="hbOrange">#F47920</color>
+    <color name="hbDarkOrange">#C64A1A</color>
+    <color name="hbLightOrange">#FCCAA6</color>
+</resources>

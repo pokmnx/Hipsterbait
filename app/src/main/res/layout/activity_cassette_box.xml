@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cassette_box"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hipsterbait.android.activities.CassetteBoxActivity"
+    android:background="@color/hbCharcoal80">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/home_button"
+            android:id="@+id/box_home_button"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="8dp"
+            android:onClick="homeButtonTapped"/>
+
+        <com.hipsterbait.android.widgets.HBTextView
+            android:text="Cassette Box"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/box_title"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:typeface="robotoCondensedBold"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/archive_off"
+            android:id="@+id/box_archive_button"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitCenter"
+            android:onClick="archiveButtonTapped"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp">
+
+        <ImageButton
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/filter_button"
+            android:id="@+id/box_filter_button"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:layout_width="30dp"
+            android:onClick="filterButtonTapped"/>
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="All"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/box_button_1"
+            android:layout_weight="1"
+            android:background="@color/hbGreen"
+            android:layout_marginStart="4dp"
+            app:typeface="robotoCondensed"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:tag="0" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="Hidden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/box_button_2"
+            android:layout_weight="1"
+            android:background="@color/hbCharcoal"
+            android:layout_marginStart="4dp"
+            app:typeface="robotoCondensed"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:tag="1" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="Holding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/box_button_3"
+            android:layout_weight="1"
+            android:background="@color/hbCharcoal"
+            android:layout_marginStart="4dp"
+            app:typeface="robotoCondensed"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:tag="2" />
+
+        <com.hipsterbait.android.widgets.HBButton
+            android:text="Flagged"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/box_button_4"
+            android:layout_weight="1"
+            android:background="@color/hbCharcoal"
+            android:layout_marginStart="4dp"
+            app:typeface="robotoCondensed"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:tag="3" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cassette_box_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/hbCharcoal90">
+
+    <com.hipsterbait.android.widgets.HBTextView
+        android:id="@+id/cassette_empty_cell_text"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="No cassette yet :("
+        android:textColor="@color/hbCharcoal90"
+        android:textSize="15sp"
+        app:typeface="robotoCondensedLight" />
+</LinearLayout>

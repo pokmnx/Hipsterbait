@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="90dp"
+    android:layout_height="112dp"
+    android:background="@color/hbCharcoal80"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/badgeitem_imageview"
+        android:src="@drawable/locked_badge_bg" />
+
+    <com.hipsterbait.android.widgets.HBTextView
+        android:text="Badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/badgeitem_textview"
+        android:gravity="center"
+        app:typeface="robotoCondensed"
+        android:textSize="15sp" />
+
+</LinearLayout>
